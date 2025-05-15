@@ -196,6 +196,7 @@ screen.Clouds = Cloud Settings
     option.CLOUDS_QUALITY = Cloud Resolution Scaling
     option.CLOUDS_SHADOWS = Cloud Shadows
     option.Cloud_Speed = Cloud Speed Multiplier
+    option.CLOUD_USE_FRAMETIME = Bind to Worldtime
     option.Rain_coverage = Coverage When Raining
     option.Daily_Weather = Daily Weather
 
@@ -613,6 +614,7 @@ screen.Fog.comment = Configure settings related to the raymarched volumetric fog
 
 screen.Clouds.comment = Configure settings related to the raymarched volumetric clouds.
     option.VOLUMETRIC_CLOUDS.comment = Toggle the clouds. §aPERFORMANCE COST:§r medium to high
+    option.CLOUD_USE_FRAMETIME.comment = Allows Clouds to move even if worldtime is disabled.§r If disabled this will unbind cloud movement from worldtime. §aPERFORMANCE COST:§r low
     option.CLOUDS_QUALITY.comment = Configure the resolution of the volumetric clouds. §aPERFORMANCE COST:§r high
     option.CLOUDS_SHADOWS.comment = Toggle shadows that are casted from the clouds onto the ground, and fog below them. §aPERFORMANCE COST:§r low to medium
     option.Daily_Weather.comment = Toggle the weather that changes every day. §bWhat is this?§r There are 10 weather profiles that the shader cycles through every day. You cannot change any cloud coverage settings when this is enabled. §aPERFORMANCE COST:§r low

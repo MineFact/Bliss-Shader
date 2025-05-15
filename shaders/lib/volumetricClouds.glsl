@@ -48,7 +48,13 @@ float LAYER2_DENSITY = mix(dailyWeatherParams1.z,0.05,rainStrength);
 
 uniform int worldDay;
 
-float cloud_movement = (worldTime  + mod(worldDay,100)*24000.0) / 24.0 * Cloud_Speed;
+// Code from Bliss, modified by MineFact 20250515 to add cloud movement even if world time is turned off
+#ifndef CLOUD_USE_FRAMETIME
+	float cloud_movement = frameTimeCounter * (20.0 / 24.0) * Cloud_Speed;
+#else
+	float cloud_movement = (worldTime + mod(worldDay,100)*24000.0) / 24.0 * Cloud_Speed;
+#endif
+
 
 //3D noise from 2d texture
 float densityAtPos(in vec3 pos){
